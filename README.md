@@ -41,8 +41,7 @@ Open `http://127.0.0.1:1111/` and use the API reference link in the header.
 │   ├── page.html               # Entity and operation pages
 │   └── section.html            # Section listing pages
 ├── scripts/
-│   ├── custom-zola-mdx.mjs     # Wrapper that extends the Hugo preset for Zola
-│   └── generate-docs.mjs       # GraphQL-Markdown runner
+│   └── generate-docs.mjs       # GraphQL-Markdown runner (Zola preset)
 ├── tests/visual/
 │   └── site.spec.ts            # Playwright + Argos screenshots
 ├── config.toml                 # Zola configuration
@@ -64,14 +63,14 @@ npm run test:visual
 
 The tests serve `public/` on port 4173 (override with `VISUAL_PORT`) and capture desktop and mobile screenshots of the landing page, one page per GraphQL type kind, and dark mode variants.
 
-## How the formatter differs from the Hugo preset
+## Zola formatter preset
 
-The custom formatter in `scripts/custom-zola-mdx.mjs` starts from `@graphql-markdown/formatters/hugo` and changes the parts Zola handles differently:
+`scripts/generate-docs.mjs` sets `formatter: "@graphql-markdown/formatters/zola"`, the [Zola preset](https://github.com/graphql-markdown/graphql-markdown/blob/main/packages/formatters/src/zola/README.md) of `@graphql-markdown/formatters`. It starts from the Hugo preset and changes the parts Zola handles differently:
 
 - **Front matter:** Zola only accepts a fixed set of top-level keys. Hugo's `id` is moved under `extra:`; other non-whitelisted keys are moved there too.
 - **Internal links:** Links are written as Zola's checked `@/…md` form, relative to `content/`, with anchors preserved (for example `@/graphql/types/scalars/id.md`). External links are unchanged.
 - **Admonitions:** Rendered as plain blockquotes with a bold title instead of GitHub-style `> [!TYPE]` alerts.
-- **Section pages:** Every section gets an `_index.md` with `sort_by: "title"`, so Zola lists child pages alphabetically. `generate-docs.mjs` creates a minimal `_index.md` for any directory that holds pages but has none.
+- **Section pages:** Every generated category gets an `_index.md` with `sort_by: "title"`, which Zola needs to render the directory, and which lists child pages alphabetically.
 
 ## Notes
 
