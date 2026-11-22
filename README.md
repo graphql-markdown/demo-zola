@@ -2,7 +2,7 @@
 
 This project demonstrates how to generate GraphQL documentation with GraphQL-Markdown for a [Zola](https://www.getzola.org) static site, using a small custom template set.
 
-**Live demo:** [graphql-markdown.github.io/demo-zola](https://graphql-markdown.github.io/demo-zola/)
+**Live demo:** [graphql-markdown.dev/demo-zola](https://graphql-markdown.dev/demo-zola/)
 
 ## Quick start
 
