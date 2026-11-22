@@ -1,0 +1,26 @@
+{
+  "name": "demo-zola",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf content/graphql public",
+    "generate": "node ./scripts/generate-docs.mjs",
+    "dev": "npm run generate && zola serve",
+    "build": "npm run generate && zola build",
+    "build:local": "npm run generate && zola build --base-url http://localhost:4173",
+    "test:visual": "playwright test"
+  },
+  "dependencies": {
+    "@graphql-markdown/cli": "^1.2.2",
+    "@graphql-markdown/formatters": "^1.2.2",
+    "@graphql-markdown/utils": "^1.14.2",
+    "@graphql-tools/url-loader": "^10.0.9",
+    "graphql": "^17.1.0"
+  },
+  "devDependencies": {
+    "@argos-ci/playwright": "^7.10.0",
+    "@playwright/test": "^1.65.1",
+    "serve": "^14.2.8"
+  }
+}

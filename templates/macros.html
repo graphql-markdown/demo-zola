@@ -1,0 +1,8 @@
+{% component tree(path, cur) %}
+{% set s = get_section(path=path) %}
+{% for p in s.pages %}<a href="{{ p.permalink }}"{% if cur == p.path %} class="active" aria-current="page"{% endif %}>{{ p.title }}</a>{% endfor %}
+{% for sp in s.subsections %}
+{% set sub = get_section(path=sp) %}
+<details{% if cur is starting_with(pat=sub.path) or cur == "/" or cur == "/graphql/" %} open{% endif %}><summary>{{ sub.title }}</summary><div class="branch">{{ <tree path={sp} cur={cur} /> }}</div></details>
+{% endfor %}
+{% endcomponent %}

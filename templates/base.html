@@ -1,0 +1,46 @@
+{% include "macros.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="stylesheet" href="{{ get_url(path='theme.css') }}">
+  <link rel="stylesheet" href="{{ get_url(path='gqlmd.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn menu-btn" type="button" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <a class="brand" href="{{ get_url(path='') }}">{{ config.title }}</a>
+    <nav class="topnav">
+      <a href="{{ get_url(path='') }}">Home</a>
+      <a href="{{ get_url(path='graphql/') }}">API reference</a>
+      <a href="https://github.com/graphql-markdown/demo-zola">GitHub</a>
+    </nav>
+    <div class="search">
+      <input id="search" type="search" placeholder="Search" aria-label="Search" autocomplete="off">
+      <ul id="search-results" hidden></ul>
+    </div>
+    <button class="icon-btn theme-btn" type="button" aria-label="Toggle theme" title="Theme: auto">&#9680;</button>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      {% set root = get_section(path="graphql/_index.md") %}
+      <div class="group-label">API reference</div>
+      <nav>{{ <tree path="graphql/_index.md" cur={current_path} /> }}</nav>
+    </aside>
+    <div class="backdrop"></div>
+    <main class="content{% block mainclass %}{% endblock mainclass %}">
+      {% block content %}{% endblock content %}
+    </main>
+    <aside class="toc-wrap">
+      {% block toc %}{% endblock toc %}
+    </aside>
+  </div>
+  <footer class="footer">Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a></footer>
+  <script src="{{ get_url(path='elasticlunr.min.js') }}"></script>
+  <script src="{{ get_url(path='search_index.en.js') }}"></script>
+  <script src="{{ get_url(path='theme.js') }}"></script>
+</body>
+</html>
