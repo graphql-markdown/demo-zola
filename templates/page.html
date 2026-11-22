@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock title %}
+{% block content %}
+{{ page.content | safe }}
+{% endblock content %}
+{% block toc %}
+{% if page.toc | length > 1 or (page.toc | length == 1 and page.toc[0].children | length > 0) %}
+<div class="toc">
+  <div class="group-label">On this page</div>
+  {% for h in page.toc %}
+    <a href="{{ h.permalink | safe }}">{{ h.title }}</a>
+    {% for h2 in h.children %}<a class="sub" href="{{ h2.permalink | safe }}">{{ h2.title }}</a>{% endfor %}
+  {% endfor %}
+</div>
+{% endif %}
+{% endblock toc %}

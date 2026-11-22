@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ section.title }} | {{ config.title }}{% endblock title %}
+{% block content %}
+<h1>{{ section.title }}</h1>
+{{ section.content | safe }}
+<div class="cards">
+  {% for sp in section.subsections %}
+    {% set sub = get_section(path=sp) %}
+    <a class="card" href="{{ sub.permalink }}"><strong>{{ sub.title }}</strong><span>{{ sub.pages | length }} pages, {{ sub.subsections | length }} sections</span></a>
+  {% endfor %}
+  {% for p in section.pages %}
+    <a class="card" href="{{ p.permalink }}"><strong>{{ p.title }}</strong></a>
+  {% endfor %}
+</div>
+{% endblock content %}
