@@ -1,0 +1,5 @@
+base_url = "https://graphql-markdown.github.io/demo-zola"
+title = "GraphQL-Markdown Zola demo"
+description = "GraphQL schema documentation generated with GraphQL-Markdown and built with Zola."
+compile_sass = false
+build_search_index = true
