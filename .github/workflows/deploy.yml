@@ -1,0 +1,52 @@
+name: Deploy to GitHub Pages
+
+run-name: "Deploy to GitHub Pages by @${{ github.actor }}"
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+# One deploy at a time: a newer merge waits for the running deploy instead of
+# racing it on the gh-pages branch (only the latest pending run is kept).
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Setup Node.js
+        uses: actions/setup-node@v7.1.0
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install Zola
+        run: |
+          curl -fsSL -o zola.tar.gz https://github.com/getzola/zola/releases/download/v0.23.6/zola-v0.23.6-x86_64-unknown-linux-gnu.tar.gz
+          mkdir -p "$HOME/.local/bin"
+          tar -xzf zola.tar.gz -C "$HOME/.local/bin"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+        env:
+          GRAPHQL_MARKDOWN_TELEMETRY_DEBUG: "1"
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Deploy
+        run: pipx run ghp-import -n -p -f public
