@@ -1,15 +1,47 @@
 {% extends "base.html" %}
 {% block title %}{{ section.title }} | {{ config.title }}{% endblock title %}
 {% block content %}
-<h1>{{ section.title }}</h1>
-{{ section.content | safe }}
+{% set root_path = "graphql/_index.md" %}
+{% set is_root = section.relative_path == root_path %}
+{% set total = section.pages | length %}
+{% if not is_root %}
+<nav class="crumbs" aria-label="Breadcrumb">
+  {% for a in section.ancestors %}{% if a != "_index.md" %}{% set as = get_section(path=a) %}<a href="{{ as.permalink }}">{% if a == root_path %}API Reference{% else %}{{ as.title }}{% endif %}</a><span aria-hidden="true">›</span>{% endif %}{% endfor %}
+  <span aria-current="page">{{ section.title }}</span>
+</nav>
+{% else %}
+<nav class="crumbs" aria-label="Breadcrumb"><span aria-current="page">API Reference</span></nav>
+{% endif %}
+<h1>{% if is_root %}API Reference{% else %}{{ section.title }}{% endif %}</h1>
+{% if section.ancestors | length > 1 %}{% set parent = get_section(path=section.ancestors | last) %}{% if section.ancestors | last == root_path %}{% set parent_title = "API Reference" %}{% else %}{% set parent_title = parent.title %}{% endif %}{% else %}{% set parent_title = "API Reference" %}{% endif %}
+{% set noun = section.title | lower %}
+{% if total == 1 %}{% if noun is ending_with(pat="ies") %}{% set noun = noun | replace(from="ies", to="y") %}{% elif noun is ending_with(pat="s") %}{% set l = noun | length - 1 %}{% set noun = noun | truncate(length=l, end="") %}{% endif %}{% endif %}
+{% if total > 0 %}
+<p class="section-intro">{{ total }} {{ noun }} in {{ parent_title }}.</p>
+{% elif not is_root %}
+<p class="section-intro">{{ section.subsections | length }} categor{% if section.subsections | length == 1 %}y{% else %}ies{% endif %} in {{ parent_title }}.</p>
+{% else %}
+<p class="section-intro">Browse the GraphQL schema by category: operations and types.</p>
+{% endif %}
+{% if section.subsections | length > 0 %}
 <div class="cards">
   {% for sp in section.subsections %}
     {% set sub = get_section(path=sp) %}
-    <a class="card" href="{{ sub.permalink }}"><strong>{{ sub.title }}</strong><span>{{ sub.pages | length }} pages, {{ sub.subsections | length }} sections</span></a>
-  {% endfor %}
-  {% for p in section.pages %}
-    <a class="card" href="{{ p.permalink }}"><strong>{{ p.title }}</strong></a>
+    {% set_global n = sub.pages | length %}{% for q in sub.subsections %}{% set qs = get_section(path=q) %}{% set_global n = n + qs.pages | length %}{% endfor %}
+    <a class="card card-section" href="{{ sub.permalink }}"><strong>{{ sub.title }}</strong><span class="card-meta">{{ n }} item{% if n != 1 %}s{% endif %}</span></a>
   {% endfor %}
 </div>
+{% endif %}
+{% if section.pages | length > 0 %}
+<div class="cards">
+  {% for p in section.pages %}
+    {% set para = p.content | split(pat="<p>") | nth(n=1) | default(value="") %}
+    {% set desc = para | split(pat="</p>") | first | striptags | trim | truncate(length=120) %}
+    <a class="card card-page" href="{{ p.permalink }}">
+      <span class="card-head"><code>{{ p.title }}</code>{% if "DEPRECATED" in p.content %}<span class="card-badge">deprecated</span>{% endif %}</span>
+      {% if desc %}<span class="card-desc">{{ desc }}</span>{% endif %}
+    </a>
+  {% endfor %}
+</div>
+{% endif %}
 {% endblock content %}

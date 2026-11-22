@@ -1,0 +1,53 @@
+/* Syntax highlighting: github-light / github-dark (giallo class output, scoped to the site theme) */
+.z-l-1{color: #005CC5;}
+.z-l-2{color: #032F62;}
+.z-l-3{color: #22863A;}
+.z-l-4{color: #586069;}
+.z-l-5{color: #6A737D;}
+.z-l-6{color: #6F42C1;}
+.z-l-7{color: #B31D28;}
+.z-l-8{color: #D73A49;}
+.z-l-9{color: #E36209;}
+.z-l-10{color: #F6F8FA;}
+.z-l-11{color: #FAFBFC;}
+.z-l-b{font-weight: bold;}
+.z-l-i{font-style: italic;}
+.z-l-u{text-decoration: underline;}
+.z-l-s{text-decoration: line-through;}
+.z-l-us{text-decoration: underline line-through;}
+@media (prefers-color-scheme:dark){
+:root:not([data-theme="light"]) .z-d-1{color: #24292E;}
+:root:not([data-theme="light"]) .z-d-2{color: #2F363D;}
+:root:not([data-theme="light"]) .z-d-3{color: #6A737D;}
+:root:not([data-theme="light"]) .z-d-4{color: #79B8FF;}
+:root:not([data-theme="light"]) .z-d-5{color: #85E89D;}
+:root:not([data-theme="light"]) .z-d-6{color: #9ECBFF;}
+:root:not([data-theme="light"]) .z-d-7{color: #B392F0;}
+:root:not([data-theme="light"]) .z-d-8{color: #D1D5DA;}
+:root:not([data-theme="light"]) .z-d-9{color: #DBEDFF;}
+:root:not([data-theme="light"]) .z-d-10{color: #F97583;}
+:root:not([data-theme="light"]) .z-d-11{color: #FDAEB7;}
+:root:not([data-theme="light"]) .z-d-12{color: #FFAB70;}
+:root:not([data-theme="light"]) .z-d-b{font-weight: bold;}
+:root:not([data-theme="light"]) .z-d-i{font-style: italic;}
+:root:not([data-theme="light"]) .z-d-u{text-decoration: underline;}
+:root:not([data-theme="light"]) .z-d-s{text-decoration: line-through;}
+:root:not([data-theme="light"]) .z-d-us{text-decoration: underline line-through;}
+}
+:root[data-theme="dark"] .z-d-1{color: #24292E;}
+:root[data-theme="dark"] .z-d-2{color: #2F363D;}
+:root[data-theme="dark"] .z-d-3{color: #6A737D;}
+:root[data-theme="dark"] .z-d-4{color: #79B8FF;}
+:root[data-theme="dark"] .z-d-5{color: #85E89D;}
+:root[data-theme="dark"] .z-d-6{color: #9ECBFF;}
+:root[data-theme="dark"] .z-d-7{color: #B392F0;}
+:root[data-theme="dark"] .z-d-8{color: #D1D5DA;}
+:root[data-theme="dark"] .z-d-9{color: #DBEDFF;}
+:root[data-theme="dark"] .z-d-10{color: #F97583;}
+:root[data-theme="dark"] .z-d-11{color: #FDAEB7;}
+:root[data-theme="dark"] .z-d-12{color: #FFAB70;}
+:root[data-theme="dark"] .z-d-b{font-weight: bold;}
+:root[data-theme="dark"] .z-d-i{font-style: italic;}
+:root[data-theme="dark"] .z-d-u{text-decoration: underline;}
+:root[data-theme="dark"] .z-d-s{text-decoration: line-through;}
+:root[data-theme="dark"] .z-d-us{text-decoration: underline line-through;}
