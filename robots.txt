@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+Sitemap: https://graphql-markdown.dev/demo-zola/sitemap.xml

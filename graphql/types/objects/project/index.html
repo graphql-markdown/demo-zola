@@ -1,0 +1,204 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project | GraphQL-Markdown Zola demo</title>
+  <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="stylesheet" href="https://graphql-markdown.dev/demo-zola/theme.css">
+  <link rel="stylesheet" href="https://graphql-markdown.dev/demo-zola/gqlmd.css">
+  <link rel="stylesheet" href="https://graphql-markdown.dev/demo-zola/highlight.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn menu-btn" type="button" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <a class="brand" href="https://graphql-markdown.dev/demo-zola">GraphQL-Markdown Zola demo</a>
+    <nav class="topnav">
+      <a href="https://graphql-markdown.dev/demo-zola">Home</a>
+      <a href="https://graphql-markdown.dev/demo-zola/graphql">API reference</a>
+      <a href="https://github.com/graphql-markdown/demo-zola">GitHub</a>
+    </nav>
+    <div class="search">
+      <input id="search" type="search" placeholder="Search" aria-label="Search" autocomplete="off">
+      <ul id="search-results" hidden></ul>
+    </div>
+    <button class="icon-btn theme-btn" type="button" aria-label="Toggle theme" title="Theme: auto">&#9680;</button>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      
+      <div class="group-label">API reference</div>
+      <nav>
+
+
+
+
+<details><summary>Operations</summary><div class="branch">
+
+
+
+
+<details><summary>Directives</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/operations/directives/include/">include</a><a href="https://graphql-markdown.dev/demo-zola/graphql/operations/directives/skip/">skip</a>
+
+</div></details>
+
+
+<details><summary>Mutations</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/operations/mutations/archive-project/">archiveProject</a><a href="https://graphql-markdown.dev/demo-zola/graphql/operations/mutations/create-folder/">createFolder</a><a href="https://graphql-markdown.dev/demo-zola/graphql/operations/mutations/create-project/">createProject</a>
+
+</div></details>
+
+
+<details><summary>Queries</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/operations/queries/folder/">folder</a><a href="https://graphql-markdown.dev/demo-zola/graphql/operations/queries/folders/">folders</a><a href="https://graphql-markdown.dev/demo-zola/graphql/operations/queries/projects/">projects</a><a href="https://graphql-markdown.dev/demo-zola/graphql/operations/queries/search/">search</a>
+
+</div></details>
+
+
+<details><summary>Subscriptions</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/operations/subscriptions/folder-created/">folderCreated</a><a href="https://graphql-markdown.dev/demo-zola/graphql/operations/subscriptions/project-changed/">projectChanged</a>
+
+</div></details>
+
+</div></details>
+
+
+<details open><summary>Types</summary><div class="branch">
+
+
+
+
+<details><summary>Directives</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/types/directives/deprecated/">deprecated</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/directives/deprecated-type/">deprecatedType</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/directives/example/">example</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/directives/example-response/">exampleResponse</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/directives/example-variables/">exampleVariables</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/directives/one-of/">oneOf</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/directives/specified-by/">specifiedBy</a>
+
+</div></details>
+
+
+<details><summary>Enums</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/types/enums/project-event-type/">ProjectEventType</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/enums/project-status/">ProjectStatus</a>
+
+</div></details>
+
+
+<details><summary>Inputs</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/types/inputs/create-project-input/">CreateProjectInput</a>
+
+</div></details>
+
+
+<details><summary>Interfaces</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/types/interfaces/node/">Node</a>
+
+</div></details>
+
+
+<details open><summary>Objects</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/folder/">Folder</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/legacy-project/">LegacyProject</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/project/" class="active" aria-current="page">Project</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/project-connection/">ProjectConnection</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/project-event/">ProjectEvent</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/user/">User</a>
+
+</div></details>
+
+
+<details><summary>Scalars</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/types/scalars/boolean/">Boolean</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/scalars/date-time/">DateTime</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/scalars/id/">ID</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/scalars/int/">Int</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/scalars/string/">String</a>
+
+</div></details>
+
+
+<details><summary>Unions</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/types/unions/search-result/">SearchResult</a>
+
+</div></details>
+
+</div></details>
+
+</nav>
+    </aside>
+    <div class="backdrop"></div>
+    <main class="content">
+      
+<h1 id="project">Project</h1>
+<p>A unit of work tracked in the workspace.</p>
+<pre class="giallo z-l-code z-d-code" ><code data-lang="graphql"><span class="giallo-l"><span class="z-l-8 z-d-10">type</span><span class="z-l-1 z-d-4"> Project</span><span class="z-l-8 z-d-10"> implements</span><span class="z-l-1 z-d-4"> Node</span><span> {</span></span>
+<span class="giallo-l"><span class="z-l-9 z-d-12">  id</span><span>:</span><span class="z-l-1 z-d-4"> ID</span><span class="z-l-8 z-d-10">!</span></span>
+<span class="giallo-l"><span class="z-l-9 z-d-12">  name</span><span>:</span><span class="z-l-1 z-d-4"> String</span><span class="z-l-8 z-d-10">!</span></span>
+<span class="giallo-l"><span class="z-l-9 z-d-12">  status</span><span>:</span><span class="z-l-1 z-d-4"> ProjectStatus</span><span class="z-l-8 z-d-10">!</span></span>
+<span class="giallo-l"><span class="z-l-9 z-d-12">  owner</span><span>:</span><span class="z-l-1 z-d-4"> User</span><span class="z-l-8 z-d-10">!</span></span>
+<span class="giallo-l"><span class="z-l-9 z-d-12">  folder</span><span>:</span><span class="z-l-1 z-d-4"> Folder</span></span>
+<span class="giallo-l"><span class="z-l-9 z-d-12">  updatedAt</span><span>:</span><span class="z-l-1 z-d-4"> DateTime</span><span class="z-l-8 z-d-10">!</span></span>
+<span class="giallo-l"><span class="z-l-9 z-d-12">  state</span><span>:</span><span class="z-l-1 z-d-4"> String</span><span class="z-l-6 z-d-7"> @deprecated</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><h3 id="fields">Fields</h3>
+<h4 id="project-id-id-non-null-scalar"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Project</code>.<code class="gqlmd-mdx-entity-name">id</code></span><span class="gqlmd-mdx-bullet"> ● </span><a href="https://graphql-markdown.dev/demo-zola/graphql/types/scalars/id/"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">ID!</code></span></a> <span class="gqlmd-badge">non-null</span> <span class="gqlmd-badge">scalar</span></h4>
+<p>The unique identifier of the project.</p>
+<h4 id="project-name-string-non-null-scalar"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Project</code>.<code class="gqlmd-mdx-entity-name">name</code></span><span class="gqlmd-mdx-bullet"> ● </span><a href="https://graphql-markdown.dev/demo-zola/graphql/types/scalars/string/"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String!</code></span></a> <span class="gqlmd-badge">non-null</span> <span class="gqlmd-badge">scalar</span></h4>
+<p>The project name shown to collaborators.</p>
+<h4 id="project-status-projectstatus-non-null-enum"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Project</code>.<code class="gqlmd-mdx-entity-name">status</code></span><span class="gqlmd-mdx-bullet"> ● </span><a href="https://graphql-markdown.dev/demo-zola/graphql/types/enums/project-status/"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">ProjectStatus!</code></span></a> <span class="gqlmd-badge">non-null</span> <span class="gqlmd-badge">enum</span></h4>
+<p>The current lifecycle stage of the project.</p>
+<h4 id="project-owner-user-non-null-object"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Project</code>.<code class="gqlmd-mdx-entity-name">owner</code></span><span class="gqlmd-mdx-bullet"> ● </span><a href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/user/"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">User!</code></span></a> <span class="gqlmd-badge">non-null</span> <span class="gqlmd-badge">object</span></h4>
+<p>The user responsible for the project.</p>
+<h4 id="project-folder-folder-object"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Project</code>.<code class="gqlmd-mdx-entity-name">folder</code></span><span class="gqlmd-mdx-bullet"> ● </span><a href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/folder/"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">Folder</code></span></a> <span class="gqlmd-badge">object</span></h4>
+<p>The folder containing this project, when assigned.</p>
+<h4 id="project-updatedat-datetime-non-null-scalar"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Project</code>.<code class="gqlmd-mdx-entity-name">updatedAt</code></span><span class="gqlmd-mdx-bullet"> ● </span><a href="https://graphql-markdown.dev/demo-zola/graphql/types/scalars/date-time/"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">DateTime!</code></span></a> <span class="gqlmd-badge">non-null</span> <span class="gqlmd-badge">scalar</span></h4>
+<p>When the project was last updated.</p>
+<h4 id="project-state-string-deprecated-scalar"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Project</code>.<code class="gqlmd-mdx-entity-name">state</code></span><span class="gqlmd-mdx-bullet"> ● </span><a href="https://graphql-markdown.dev/demo-zola/graphql/types/scalars/string/"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String</code></span></a> <span class="gqlmd-badge">deprecated</span> <span class="gqlmd-badge">scalar</span></h4>
+<blockquote>
+<p><strong>DEPRECATED</strong></p>
+<p>Replaced by the <a href="https://graphql-markdown.dev/demo-zola/graphql/types/enums/project-status/"><code>ProjectStatus</code></a> enum on status.</p>
+</blockquote>
+<p>The project's lifecycle stage.</p>
+<h3 id="interfaces">Interfaces</h3>
+<h4 id="node-interface"><a href="https://graphql-markdown.dev/demo-zola/graphql/types/interfaces/node/"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">Node</code></span></a> <span class="gqlmd-badge">interface</span></h4>
+<p>A globally unique entity identifier.</p>
+<h3 id="example">Example</h3>
+<pre class="giallo z-l-code z-d-code" ><code data-lang="graphql"><span class="giallo-l"><span>{</span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">  &quot;</span><span class="z-l-5 z-d-3">id</span><span class="z-l-5 z-d-3">&quot;</span><span>: </span><span class="z-l-5 z-d-3">&quot;</span><span class="z-l-5 z-d-3">project_01</span><span class="z-l-5 z-d-3">&quot;</span><span>,</span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">  &quot;</span><span class="z-l-5 z-d-3">name</span><span class="z-l-5 z-d-3">&quot;</span><span>: </span><span class="z-l-5 z-d-3">&quot;</span><span class="z-l-5 z-d-3">Mobile Refresh</span><span class="z-l-5 z-d-3">&quot;</span><span>,</span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">  &quot;</span><span class="z-l-5 z-d-3">status</span><span class="z-l-5 z-d-3">&quot;</span><span>: </span><span class="z-l-5 z-d-3">&quot;</span><span class="z-l-5 z-d-3">ACTIVE</span><span class="z-l-5 z-d-3">&quot;</span><span>,</span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">  &quot;</span><span class="z-l-5 z-d-3">owner</span><span class="z-l-5 z-d-3">&quot;</span><span>:</span><span> {</span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">    &quot;</span><span class="z-l-5 z-d-3">id</span><span class="z-l-5 z-d-3">&quot;</span><span>: </span><span class="z-l-5 z-d-3">&quot;</span><span class="z-l-5 z-d-3">user_01</span><span class="z-l-5 z-d-3">&quot;</span><span>,</span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">    &quot;</span><span class="z-l-5 z-d-3">name</span><span class="z-l-5 z-d-3">&quot;</span><span>: </span><span class="z-l-5 z-d-3">&quot;</span><span class="z-l-5 z-d-3">Avery Chen</span><span class="z-l-5 z-d-3">&quot;</span></span>
+<span class="giallo-l"><span>  }</span><span>,</span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">  &quot;</span><span class="z-l-5 z-d-3">updatedAt</span><span class="z-l-5 z-d-3">&quot;</span><span>: </span><span class="z-l-5 z-d-3">&quot;</span><span class="z-l-5 z-d-3">2026-09-05T10:15:00Z</span><span class="z-l-5 z-d-3">&quot;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><h3 id="returned-by">Returned By</h3>
+<p><a href="https://graphql-markdown.dev/demo-zola/graphql/operations/mutations/archive-project/"><code>archiveProject</code></a>  <span class="gqlmd-badge">mutation</span><span class="gqlmd-mdx-bullet"> ● </span><a href="https://graphql-markdown.dev/demo-zola/graphql/operations/mutations/create-project/"><code>createProject</code></a>  <span class="gqlmd-badge">mutation</span></p>
+<h3 id="member-of">Member Of</h3>
+<p><a href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/project-connection/"><code>ProjectConnection</code></a>  <span class="gqlmd-badge">object</span><span class="gqlmd-mdx-bullet"> ● </span><a href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/project-event/"><code>ProjectEvent</code></a>  <span class="gqlmd-badge">object</span></p>
+<h3 id="implemented-by">Implemented By</h3>
+<p><a href="https://graphql-markdown.dev/demo-zola/graphql/types/unions/search-result/"><code>SearchResult</code></a>  <span class="gqlmd-badge">union</span></p>
+<p><a rel="external" href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/project.md">View as Markdown</a></p>
+
+
+    </main>
+    <aside class="toc-wrap">
+      
+
+<div class="toc">
+  <div class="group-label">On this page</div>
+  
+    <a href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/project/#project">Project</a>
+    <a class="sub" href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/project/#fields">Fields</a><a class="sub" href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/project/#interfaces">Interfaces</a><a class="sub" href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/project/#example">Example</a><a class="sub" href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/project/#returned-by">Returned By</a><a class="sub" href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/project/#member-of">Member Of</a><a class="sub" href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/project/#implemented-by">Implemented By</a>
+  
+</div>
+
+
+    </aside>
+  </div>
+  <footer class="footer">Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a></footer>
+  <script src="https://graphql-markdown.dev/demo-zola/elasticlunr.min.js"></script>
+  <script src="https://graphql-markdown.dev/demo-zola/search_index.en.js"></script>
+  <script src="https://graphql-markdown.dev/demo-zola/theme.js"></script>
+</body>
+</html>

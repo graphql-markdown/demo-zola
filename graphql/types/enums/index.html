@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enums | GraphQL-Markdown Zola demo</title>
+  <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="stylesheet" href="https://graphql-markdown.dev/demo-zola/theme.css">
+  <link rel="stylesheet" href="https://graphql-markdown.dev/demo-zola/gqlmd.css">
+  <link rel="stylesheet" href="https://graphql-markdown.dev/demo-zola/highlight.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn menu-btn" type="button" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <a class="brand" href="https://graphql-markdown.dev/demo-zola">GraphQL-Markdown Zola demo</a>
+    <nav class="topnav">
+      <a href="https://graphql-markdown.dev/demo-zola">Home</a>
+      <a href="https://graphql-markdown.dev/demo-zola/graphql">API reference</a>
+      <a href="https://github.com/graphql-markdown/demo-zola">GitHub</a>
+    </nav>
+    <div class="search">
+      <input id="search" type="search" placeholder="Search" aria-label="Search" autocomplete="off">
+      <ul id="search-results" hidden></ul>
+    </div>
+    <button class="icon-btn theme-btn" type="button" aria-label="Toggle theme" title="Theme: auto">&#9680;</button>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      
+      <div class="group-label">API reference</div>
+      <nav>
+
+
+
+
+<details><summary>Operations</summary><div class="branch">
+
+
+
+
+<details><summary>Directives</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/operations/directives/include/">include</a><a href="https://graphql-markdown.dev/demo-zola/graphql/operations/directives/skip/">skip</a>
+
+</div></details>
+
+
+<details><summary>Mutations</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/operations/mutations/archive-project/">archiveProject</a><a href="https://graphql-markdown.dev/demo-zola/graphql/operations/mutations/create-folder/">createFolder</a><a href="https://graphql-markdown.dev/demo-zola/graphql/operations/mutations/create-project/">createProject</a>
+
+</div></details>
+
+
+<details><summary>Queries</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/operations/queries/folder/">folder</a><a href="https://graphql-markdown.dev/demo-zola/graphql/operations/queries/folders/">folders</a><a href="https://graphql-markdown.dev/demo-zola/graphql/operations/queries/projects/">projects</a><a href="https://graphql-markdown.dev/demo-zola/graphql/operations/queries/search/">search</a>
+
+</div></details>
+
+
+<details><summary>Subscriptions</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/operations/subscriptions/folder-created/">folderCreated</a><a href="https://graphql-markdown.dev/demo-zola/graphql/operations/subscriptions/project-changed/">projectChanged</a>
+
+</div></details>
+
+</div></details>
+
+
+<details open><summary>Types</summary><div class="branch">
+
+
+
+
+<details><summary>Directives</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/types/directives/deprecated/">deprecated</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/directives/deprecated-type/">deprecatedType</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/directives/example/">example</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/directives/example-response/">exampleResponse</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/directives/example-variables/">exampleVariables</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/directives/one-of/">oneOf</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/directives/specified-by/">specifiedBy</a>
+
+</div></details>
+
+
+<details open><summary>Enums</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/types/enums/project-event-type/">ProjectEventType</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/enums/project-status/">ProjectStatus</a>
+
+</div></details>
+
+
+<details><summary>Inputs</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/types/inputs/create-project-input/">CreateProjectInput</a>
+
+</div></details>
+
+
+<details><summary>Interfaces</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/types/interfaces/node/">Node</a>
+
+</div></details>
+
+
+<details><summary>Objects</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/folder/">Folder</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/legacy-project/">LegacyProject</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/project/">Project</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/project-connection/">ProjectConnection</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/project-event/">ProjectEvent</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/objects/user/">User</a>
+
+</div></details>
+
+
+<details><summary>Scalars</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/types/scalars/boolean/">Boolean</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/scalars/date-time/">DateTime</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/scalars/id/">ID</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/scalars/int/">Int</a><a href="https://graphql-markdown.dev/demo-zola/graphql/types/scalars/string/">String</a>
+
+</div></details>
+
+
+<details><summary>Unions</summary><div class="branch">
+
+<a href="https://graphql-markdown.dev/demo-zola/graphql/types/unions/search-result/">SearchResult</a>
+
+</div></details>
+
+</div></details>
+
+</nav>
+    </aside>
+    <div class="backdrop"></div>
+    <main class="content">
+      
+
+
+
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="https://graphql-markdown.dev/demo-zola/graphql/">API Reference</a><span aria-hidden="true">›</span><a href="https://graphql-markdown.dev/demo-zola/graphql/types/">Types</a><span aria-hidden="true">›</span>
+  <span aria-current="page">Enums</span>
+</nav>
+
+<h1>Enums</h1>
+
+
+
+
+<p class="section-intro">2 enums in Types.</p>
+
+
+
+<div class="cards">
+  
+    
+    
+    
+    
+    
+    
+    <a class="card card-page" href="https://graphql-markdown.dev/demo-zola/graphql/types/enums/project-event-type/">
+      <span class="card-head"><code>ProjectEventType</code></span>
+      <span class="card-desc">The kind of change that occurred on a project.</span>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    <a class="card card-page" href="https://graphql-markdown.dev/demo-zola/graphql/types/enums/project-status/">
+      <span class="card-head"><code>ProjectStatus</code></span>
+      <span class="card-desc">The lifecycle stage of a project.</span>
+    </a>
+  
+</div>
+
+
+    </main>
+    <aside class="toc-wrap">
+      
+    </aside>
+  </div>
+  <footer class="footer">Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a></footer>
+  <script src="https://graphql-markdown.dev/demo-zola/elasticlunr.min.js"></script>
+  <script src="https://graphql-markdown.dev/demo-zola/search_index.en.js"></script>
+  <script src="https://graphql-markdown.dev/demo-zola/theme.js"></script>
+</body>
+</html>
