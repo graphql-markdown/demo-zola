@@ -35,10 +35,15 @@
 {% if section.pages | length > 0 %}
 <div class="cards">
   {% for p in section.pages %}
-    {% set para = p.content | split(pat="<p>") | nth(n=1) | default(value="") %}
+    {# The page header: what comes before the SDL code block. A deprecated
+       type has its "deprecated" badge there; deprecated fields come later. #}
+    {% set head = p.content | split(pat="<pre") | first %}
+    {% set paras = head | split(pat="<p>") %}
+    {% set para = paras | nth(n=1) | default(value="") %}
+    {% if "gqlmd-badge" in para %}{% set para = paras | nth(n=2) | default(value="") %}{% endif %}
     {% set desc = para | split(pat="</p>") | first | striptags | trim | truncate(length=120) %}
     <a class="card card-page" href="{{ p.permalink }}">
-      <span class="card-head"><code>{{ p.title }}</code>{% if "DEPRECATED" in p.content %}<span class="card-badge">deprecated</span>{% endif %}</span>
+      <span class="card-head"><code>{{ p.title }}</code>{% if 'gqlmd-badge">deprecated<' in head %}<span class="card-badge">deprecated</span>{% endif %}</span>
       {% if desc %}<span class="card-desc">{{ desc }}</span>{% endif %}
     </a>
   {% endfor %}
